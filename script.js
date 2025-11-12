@@ -1,4 +1,4 @@
-/*  AGENDAMENTO */
+
 function confirmarAgendamento() {
   const data = document.getElementById('data').value;
   const horario = document.getElementById('horario').value;
@@ -13,7 +13,7 @@ function confirmarAgendamento() {
   resultado.innerHTML = `✅ Reserva confirmada! Seu código de reserva é : <strong>${codigo}</strong> <br>apresente esse código na hora da reserva<br>Data: ${data} às ${horario}`;
 }
 
-/* Preencher horários*/
+
 document.addEventListener("DOMContentLoaded", () => {
   const select = document.getElementById("horario");
   if (select) {
@@ -23,7 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // Bloqueia dias anteriores
+
   const dataInput = document.getElementById("data");
   if (dataInput) {
     const hoje = new Date().toISOString().split("T")[0];
@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-/* DELIVERY*/
+
 let total = 0;
 const itens = [];
 
@@ -52,3 +52,4 @@ function atualizarCarrinho() {
   });
   totalTxt.textContent = `Total: R$ ${total.toFixed(2)}`;
 }
+
